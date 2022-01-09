@@ -1,5 +1,11 @@
 # aws_Polly_sample
 
+## Amazon Polly:
+
+https://docs.aws.amazon.com/polly/latest/dg/what-is.html
+
+```aws polly describe-voices --language en-US --output table```
+
 ![poly](./img/polly.JPG)
 
 API Requests
@@ -58,3 +64,9 @@ AWS4-HMAC-SHA256
 2022-01-07 23:41:24,802 botocore.hooks [DEBUG] Event needs-retry.polly.SynthesizeSpeech: calling handler <botocore.retryhandler.RetryHandler object at 0x7ff5973defa0>
 2022-01-07 23:41:24,802 botocore.retryhandler [DEBUG] No retry needed.                                                         23:41:24 
  dmedragh@MSI      aws_Polly_sample  main  
+
+### uplad lexicon 
+``` aws polly put-lexicon --name awsLexicon --content file://aws-lexicon.xml ```
+
+### Delete upladed lexicon 
+``` aws polly delete-lexicon --name awsLexicon ```
